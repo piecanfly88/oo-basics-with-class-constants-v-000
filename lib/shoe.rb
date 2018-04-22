@@ -7,19 +7,13 @@ class Shoe
 
   def initialize(brand)
     @brand = brand
+    BRANDS.uniq << brand
   end
 
   def brand=(brand)
     @brand = brand
     BRANDS << brand
   end
-
-  # def uniq_brand=(uniq_brand)
-  #   @uniq_brand = uniq_brand
-  #   BRANDS << brand
-  # end
-
-  BRANDS.uniq
 
   def cobble
     self.condition = "new"
