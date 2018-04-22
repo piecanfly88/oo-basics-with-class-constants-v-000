@@ -8,9 +8,10 @@ class Shoe
     @brand = brand
   end
 
-  def cobble
-    self.condition = "new"
-    puts "Your shoe is as good as new!"
+  def brand=(brand)
+    @brand = brand
+    BRANDS << brand
   end
 
+  BRANDS.unique
 end
